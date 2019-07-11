@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = function collectSameElements(collectionA, objectB) {
-  return '实现练习要求，并改写该行代码。';
+  return collectionA.filter((item) => {
+    return objectB['value'].indexOf(item['key']) != -1;
+  }).map(obj => obj.key);
 }
+
+
+
